@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+        <title>Nordic: Головна</title>
+        <meta name="description" content="Ласкаво просимо на Nordic — віртуальний клуб Скандинавії та вікінгів!">
+        <link rel="stylesheet" type="text/css" href="../styles.css"/>  
+        <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+        <link rel="icon" type="image/png" href="../favicon.png">
+    </head>
+    <body>
+        <div class="header" id="header">
+            <img class="sidenav-button" onclick="open_sidenav()" src="../common/O_helmet_pierced_navmenu.svg">
+            <img class="nordic-title" id="nordic_title" src="../common/nordic2.svg">
+        </div>
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="close-button" onclick="close_sidenav()">&times;</a>
+            <a href="../index.html">Головна</a>
+            <a href="../history/history.html">Історія</a>
+            <a href="../religion/religion.html">Міфи і релігія</a>
+            <a href="../pop-culture/pop-culture.html">Популярна культура</a>
+        </div>
+        <h1>Скандинавські міфи та релігія</h1>
+        <p class="partial">Скандинавська міфологія є однією з популярно відомих систем міфологічних вірувань у світі. Вона охоплює міфи та легенди, що були розповсюджені серед народів Скандинавії, зокрема у вікінгів — північних мандрівників та авантюристів. Основу наших знань про скандинавську міфологію становить збірка міфів, відома як "Едда". Оскільки до християнизації скандинави не записували свою культуру, віддаючи перевагу усній передачі від старих до молодих, більшість інформації про скандинавську культуру, особливо ранню, була безповоротно втрачена. Сама ж Едда була зібрана вже через декілька століть після того, як скандинави перейшли з вірувань предків на християнство.</p>
+        <p class="partial">Згідно із віруваннями скандинавів, Всесвіт з’явився із первісного хаосу, з’являлись світи суцільного холоду та жару, а з їх комбінації — з’явився батько всіх йотунів, тобто велетнів. Його звали Імір. Імір був величезним морозним велетнем, набагато більшим за всіх своїх нащадків. Більшу частину свого часу він проводив, п'ючи тепле і смачне молоко велетенської корови Аудумли. Здавалося, ніщо не могло втамувати його голод, харчуватися коров'ячим вим'ям - це все, що він хотів робити. Поки він жадібно ссав вим'я, корова Аудумла відкрила ще одну істоту, лизнувши один із солоних покритих інеєм каменів, — це був Бурі, предок усіх богів-асів.</p>
+        <div class="imgwrap"><img src="audumla.png" alt="Імір смокче молоко велетенської корова Аудумли"></div>
+        <p class="standalone">Три боги, Одін, Вілі та Ве, зненавиділи йотунів, особливо жадібного, галасливого та хлюпаючого Йміра, тож вони вирішили його позбутися. Коли настав час, вони атакували, і після довгої і жахливої битви вони перемогли Іміра. З його плоті три боги створили світ: кров стала океаном, кістки – горами, волосся – деревами, мозок – хмарами, череп – небом, а брови – царством Мідгард, домівкою людини. Поки три боги створювали світ, труп почав гнити, і з плоті почали з'являтися маленькі личинки, які стали гномами.</p>
+        <div class="imgwrap"><img src="Ymir.png" alt="Вбивство велетня Іміра"></div>
+        <p class="standalone">Окрім цього, міфологія та легенди скандинавів включає в себе безліч захопливих міфів про легендарних богів, героїв та створінь, багато з яких дуже відомі і їх постаті часто трапляються в популярній культурі, такі як Тор, Локі, Рагнар Лодброк, Брунгільда, Сігурд та безліч інших. <a href="../pop-culture/pop-culture.html">Більше про нордичні мотиви в популярній культурі.</a> У історіях також важливу роль відіграють різноманітні створіння і чарівні істоти, такі як ворони, дерева, змії, вовки і дракони.</p>
+        
+        <script>
+            function hide_nordic_title() {
+                document.getElementById("sidenav").appendChild(document.getElementById("nordic_title"))
+
+            }
+            
+            function show_nordic_title(){
+                document.getElementById("header").appendChild(document.getElementById("nordic_title"));
+            }
+
+
+            function handlePhoneChange(e) {
+                if (e.matches) {
+                    hide_nordic_title();
+                } else {
+                    show_nordic_title();
+                }
+            }
+            var mediaQuery = window.matchMedia("(max-width: 700px)");
+            //var mediaQuery2 = window.matchMedia("(min-width: 700px)");
+            handlePhoneChange(mediaQuery);
+            //handlePhoneChange(mediaQuery2);
+            mediaQuery.addListener(handlePhoneChange);
+            //mediaQuery2.addListener(handlePhoneChange);
+
+            function open_sidenav() {
+                if (screen.width > 450) {
+                    document.getElementById("sidenav").style.width = "450px";
+                } else if (screen.width > 350) {
+                    document.getElementById("sidenav").style.width = "350px";
+                } else if (screen.width > 250) {
+                    document.getElementById("sidenav").style.width = "250px";
+                }
+            }
+
+            function close_sidenav() {
+                document.getElementById("sidenav").style.width = "0px";
+            }
+        </script>
+    </body>
+</html>
