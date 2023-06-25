@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+        <title>Nordic: Головна</title>
+        <meta name="description" content="Ласкаво просимо на Nordic — віртуальний клуб Скандинавії та вікінгів!">
+        <link rel="stylesheet" type="text/css" href="../styles.css"/>  
+        <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+        <link rel="icon" type="image/png" href="../favicon.png">
+    </head>
+    <body>
+        <div class="header" id="header">
+            <img class="sidenav-button" onclick="open_sidenav()" src="../common/O_helmet_pierced_navmenu.svg">
+            <img class="nordic-title" id="nordic_title" src="../common/nordic2.svg">
+        </div>
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="close-button" onclick="close_sidenav()">&times;</a>
+            <a href="../index.html">Головна</a>
+            <a href="history.html">Історія</a>
+            <a href="../religion/religion.html">Міфи і релігія</a>
+            <a href="../pop-culture/pop-culture.html">Популярна культура</a>
+        </div>
+        <h1>Загальна історія Скандинавії</h1>
+        <p class="standalone">Скандинавія — це історичний і географічний регіон, який включає три країни Північної Європи — Норвегію, Швецію та Данію. Також до країн Скандинавії іноді відносять Фінляндію та Ісландію, хоча більш коректним буде використання термінів “Нордичні країни” або “Північні країни”. Скандинавія має історію, що налічує тисячоліття і пов'язана з мореплаванням, виживанням у складних умовах Півночі, тісними зв’язками між людьми, розселенням, формуванням національних держав та інноваціями.</p>
+        <div class="imgwrap"><img src="scandinavia-map.png" alt="Мапа країн сучасної скандинавії"></div>
+        <p class="partial">Найстаріші відносно правдиво і об’ємно задокументовані відомості про Скандинавію походять з 8-11 століть нашої ери з хронік, що записували християнські монахи Західної Європи, а пізніше і Східної. І хоча про північ Європи писали ще античні грецькі та римські історики, в їх записах Північ була сильно міфологізована та рідко згадувалась. Тоді скандинавська писемність була дуже незначною і короткою, їх міфи та саги передавалися з уст в уста поколіннями. Лише через багато століть, вже після християнизації регіону, те що ще залишилось, переведуть у писемний вигляд. <a href="../religion/religion.html">Більше про міфи та релігію.</a></p>
+        <p class="partial">Часи з восьмого по одинадцяте століття називають “добою вікінгів”. В цей час скандинави починають розселятися, грабувати та торгувати із приморськими та прирічковими поселеннями Європи та Африки. За загальноприйнятою версією, доба вікінгів почалась з розграбування монастиря на острові Ліндісфарн у північній Англії 793 року, хоча є більш ранні записи про набіги на англійські та ірландські поселення. Кінцем доби вікінгів вважають перемогу Вільгельма Завойовника у війні за англійський престол 1066 року. <a href="expansion/expansion.html">Більше про добу вікінгів.</a></p>
+        <p class="partial">В 10-11 століттях Норвегія, Данія та Швеція почали централізуватися під владою феодальних християнських королів. В 1397 році було утворено Калмарській союз, що об'єднав Норвегію, Данію та Швецію під владою короля Данії. Але союз розпався в 1523 році, коли Швеція вийшла з нього і стала незалежною країною.</p>
+        <div class="imgwrap"><img src="Kalmar-union.png" alt="Кальмарська унія, мапа."></div>
+        <p class="standalone">До 18-19 століття Швеція та Данія були впливовими гравцями в у європейській, а особливо північно- і центральноєвропейській політиці. Шведська імперія мала значний вплив, контролюючи Балтійське море і проводячи реформи, які сприяли розвитку освіти і науки. Данія контролювала Гренландію, острови Північного моря і навіть невеликі області в Африці та Індії.</p>
+        <div class="imgwrap"><img src="North-Europe-1720.png" alt=""></div>
+        <p class="standalone">У 19 столітті Скандинавія стала місцем змін і реформ. Відбулися конституційні реформи, утворилися парламенти, і регіон став одним з найбільш прогресивних у світі. В 20 столітті всі країни Скандинавії стали соціально-демократичними державами з високим рівнем свободи, демократичності, заможності і соціального захисту. Сучасна Скандинавія відома своїм високим рівнем життя, стабільним економічним розвитком, прогресивними екологічними політиками та інноваційними технологіями.</p>
+        
+        <script>
+            function hide_nordic_title() {
+                document.getElementById("sidenav").appendChild(document.getElementById("nordic_title"))
+
+            }
+            
+            function show_nordic_title(){
+                document.getElementById("header").appendChild(document.getElementById("nordic_title"));
+            }
+
+
+            function handlePhoneChange(e) {
+                if (e.matches) {
+                    hide_nordic_title();
+                } else {
+                    show_nordic_title();
+                }
+            }
+            var mediaQuery = window.matchMedia("(max-width: 700px)");
+            //var mediaQuery2 = window.matchMedia("(min-width: 700px)");
+            handlePhoneChange(mediaQuery);
+            //handlePhoneChange(mediaQuery2);
+            mediaQuery.addListener(handlePhoneChange);
+            //mediaQuery2.addListener(handlePhoneChange);
+
+            function open_sidenav() {
+                if (screen.width > 450) {
+                    document.getElementById("sidenav").style.width = "450px";
+                } else if (screen.width > 350) {
+                    document.getElementById("sidenav").style.width = "350px";
+                } else if (screen.width > 250) {
+                    document.getElementById("sidenav").style.width = "250px";
+                }
+            }
+
+            function close_sidenav() {
+                document.getElementById("sidenav").style.width = "0px";
+            }
+        </script>
+    </body>
+</html>
