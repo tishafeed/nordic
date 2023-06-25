@@ -1,0 +1,237 @@
+html, body {
+    background-color: #666666;
+}
+
+body {
+    padding: 140px 200px; 
+}
+strong {
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+img.seal{
+    float: right;
+    right: 30px;
+    bottom: 0;
+    margin: 0;
+    width: 180px;
+}
+
+div.wrapper {
+    position: relative;
+}
+
+div.imgwrap {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p.standalone {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    text-align: start;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 33px;
+    color: #000003;
+}
+p.partial {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    text-align: start;
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 33px;
+    color: #000003;
+}
+
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 5px 10px black;
+    background-color: #3F423F;
+    z-index: 1;
+}
+
+.sidenav-button {
+    display: block;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0px;
+    margin-left: 25px;
+    border: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    width: 100px;
+    height: 70px;
+    
+}
+
+.nordic-title {
+    display: block;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400px;
+    height: 88px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3F423F;
+    overflow-x: hidden;
+    padding-top: 0px;
+    transition: 0.5s;
+    box-shadow: 5px 0px 10px black;
+    
+}
+
+.sidenav a {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    text-align: start;
+    text-decoration: none;
+    font-size: 36px;
+    color: #000003;
+    display: block;
+    transition: 0.3s;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.sidenav .close-button {
+    top: 0;
+    padding-right: 40px;
+    text-align: end;
+    font-size: 72px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+button {
+    background-color: #000003;
+    margin: 0;
+    margin-top: 40px;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 48px;
+}
+
+
+@media (max-width: 1350px) {
+    body {
+        padding: 100px 50px; 
+    }
+}
+@media (max-width: 800px){
+    div.imgwrap {
+        margin-left: 0px;
+        margin-right: 0px;
+}
+}
+@media (max-width: 700px) {
+    .sidenav {
+        padding-top: 105px;
+        max-width: 450px;
+    }
+    
+    .sidenav .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 0px;
+    padding-right: 15px;
+    text-align: end;
+    font-size: 72px;
+    }
+    
+    .sidenav a {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+    .nordic-title {
+        position: absolute;
+        top: 0px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        display: block;
+        width: 200px;
+        height: 44px;
+        margin: 0;
+    }
+    button {
+        transition: 0.5s;
+        height: 125px;
+    }
+}
+@media (max-width: 450px) {
+    .sidenav {
+        max-width: 350px;
+    }
+    body {
+        padding: 100px 20px; 
+    }
+    button {
+        height: 150px;
+    }
+}
+@media (max-width: 350px) {
+    .sidenav {
+        max-width: 250px;
+    }
+    .nordic-title{
+        visibility: hidden;
+    }
+    button {
+        height: 175px;
+    }
+}
